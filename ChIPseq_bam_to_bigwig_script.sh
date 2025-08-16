@@ -11,7 +11,6 @@
 # bowtie2/2.4.4
 # samtools/1.14
 # bedtools/2.30.0
-# macs2/2.2.7.1
 # deeptools/3.5.1
 
 base=$(ls -d C0* | head -n $PBS_ARRAY_INDEX | tail -n 1)
@@ -63,4 +62,4 @@ bamCoverage -b ${base}-col-sort.bam -o ${base}_RPKM.bw \
         --extendReads
 
 # For the mouse data, use the mouse genome and respective bowtie2 index. 
-# Change the effectiveGenomeSize to 2654621783
+# In bamCoverage, change the effectiveGenomeSize to 2654621783
